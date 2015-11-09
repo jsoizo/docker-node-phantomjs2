@@ -27,7 +27,7 @@ WORKDIR /usr/local
 RUN git clone https://github.com/ariya/phantomjs.git \
     && cd phantomjs \
     && git checkout 2.0 \
-    && ./build.sh --confirm
+    && ./build.sh --confirm \
     && ln -s /usr/local/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
 
 # Run as non-root user
