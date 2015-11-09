@@ -30,10 +30,6 @@ RUN git clone https://github.com/ariya/phantomjs.git \
     && ./build.sh --confirm \
     && ln -s /usr/local/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
 
-# Run as non-root user
-RUN useradd --system --uid 72379 -m --shell /usr/sbin/nologin phantomjs
-USER phantomjs
-
+# Run 
 EXPOSE 8910
-
 CMD ["/usr/local/bin/phantomjs"]
